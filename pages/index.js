@@ -8,7 +8,7 @@ export default function Home() {
 
   const { query } = useRouter(null);
   
-  const [sort, setsort] = useState(null)
+  const [sort, setsort] = useState()
   const [selectValue, setSelectValue] = useState()
 
   const changeSort = (item) =>{
@@ -20,9 +20,9 @@ export default function Home() {
     setsort(query.orderByField)
   }, [query])
 
-  useEffect(() => {
-    router.replace(`/?orderByField=${selectValue}`)
-  }, [selectValue])
+  // useEffect(() => {
+  //   router.replace(`/?orderByField=${selectValue}`)
+  // }, [selectValue])
 
   return (
     <>
@@ -36,7 +36,7 @@ export default function Home() {
 
         
         {/* Code for Select field for sorting */}
-        <div className='flex flex-end py-3'>
+        {/* <div className='flex flex-end py-3'>
           <div>
             <p className='text-sm pb-2'>ORDER BY:</p>
             <select value={selectValue}
@@ -58,7 +58,7 @@ export default function Home() {
               <option value="AllStructures">All Structures</option>
             </select>
           </div>
-        </div>
+        </div> */}
 
         {/* Table component */}
         <Table sort={sort} changeSort={changeSort}/>
