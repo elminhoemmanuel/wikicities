@@ -1,3 +1,3 @@
-Listify App.
+Wikicities App.
 
 Built with Next.js.

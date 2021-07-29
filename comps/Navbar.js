@@ -3,8 +3,8 @@ import Link from 'next/link'
 const Navbar = () => {
     return ( 
         <nav>
-            <div className="logo">
-                <Link href='/'><a><img src='/logo.svg' /></a></Link>
+            <div className="px-16 pt-6 pb-4">
+                <Link href='/'><a className='text-gray-700 text-2xl'>Wikicities📜</a></Link>
             </div>
             
         </nav>
