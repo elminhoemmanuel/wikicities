@@ -64,7 +64,7 @@ const Table = ({ sort, changeSort }) => {
     }
 
     return (
-        <table className='text-sm text-gray-700 bg-white p-2 w-full rounded shadow'>
+        <table className='text-sm text-gray-700 bg-white p-2 w-full rounded shadow w-full'>
             <thead className='border-b border-grayborder p-2'>
                 <tr>
                     <th className='px-2 py-1 text-left header' >#</th>

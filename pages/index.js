@@ -32,7 +32,7 @@ export default function Home() {
       
       </Head>
   
-      <div className='px-16 py-8'>
+      <div className='px-10 py-8'>
 
         
         {/* Code for Select field for sorting */}
