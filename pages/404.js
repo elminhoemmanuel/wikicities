@@ -17,8 +17,8 @@ const NotFound = () => {
     return ( 
         <>
             <Head>
-                <title>Listify | 404</title>
-                <meta name="keywords" content="folks"/>
+                <title>Wikicities | 404</title>
+                <meta name="keywords" content="Not Found"/>
             </Head>
             <div className="not-found">
                 <h1>Oh oh .....</h1>
