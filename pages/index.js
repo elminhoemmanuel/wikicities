@@ -8,7 +8,7 @@ export default function Home() {
 
   const { query } = useRouter(null);
   
-  const [sort, setsort] = useState()
+  const [sort, setsort] = useState(null)
   const [selectValue, setSelectValue] = useState()
 
   const changeSort = (item) =>{
@@ -20,9 +20,9 @@ export default function Home() {
     setsort(query.orderByField)
   }, [query])
 
-  // useEffect(() => {
-  //   router.replace(`/?orderByField=${selectValue}`)
-  // }, [selectValue])
+  useEffect(() => {
+    setsort(selectValue)
+  }, [selectValue])
 
   return (
     <>
@@ -36,7 +36,7 @@ export default function Home() {
 
         
         {/* Code for Select field for sorting */}
-        {/* <div className='flex flex-end py-3'>
+        <div className='flex flex-end py-3'>
           <div>
             <p className='text-sm pb-2'>ORDER BY:</p>
             <select value={selectValue}
@@ -50,15 +50,15 @@ export default function Home() {
               <option value="city">City</option>
               <option value="country">Country</option>
               <option value="AllBuildings">All Buildings</option>
-              <option value="100+">100m+</option>
-              <option value="150+">150m+</option>
-              <option value="200+">200m+</option>
-              <option value="300+">300m+</option>
+              <option value="100">100m+</option>
+              <option value="150">150m+</option>
+              <option value="200">200m+</option>
+              <option value="300">300m+</option>
               <option value="TelecomTowers">Telecom Towers</option>
               <option value="AllStructures">All Structures</option>
             </select>
           </div>
-        </div> */}
+        </div>
 
         {/* Table component */}
         <Table sort={sort} changeSort={changeSort}/>

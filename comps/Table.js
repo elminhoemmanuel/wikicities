@@ -47,7 +47,7 @@ const Table = ({ sort, changeSort }) => {
                     });
                 }
             })
-        }else if (sort === ""){
+        }else if (sort === ""|| sort ==="#"){
             sortedData.sort((a, b) => {
                 if (a["#"] < b["#"]) {
                     return -1;
