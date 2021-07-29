@@ -8,13 +8,13 @@ export default function Home() {
 
   const { query } = useRouter(null);
   
-  const [sort, setsort] = useState()
+  const [sort, setsort] = useState(null)
   const [selectValue, setSelectValue] = useState()
 
   const changeSort = (item) =>{
     setsort(item)
   }
-  // console.log('select',selectValue)
+  console.log(query.orderByField)
 
   useEffect(() => {
     setsort(query.orderByField)
@@ -46,6 +46,7 @@ export default function Home() {
             name="order" id="order" className='block rounded border border-gray-500 p-2 bg-white focus:outline-none'>
               
               <option value="Select">Select</option>
+              <option value="#">#</option>
               <option value="city">City</option>
               <option value="country">Country</option>
               <option value="AllBuildings">All Buildings</option>
