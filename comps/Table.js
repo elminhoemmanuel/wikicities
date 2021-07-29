@@ -67,31 +67,31 @@ const Table = ({ sort, changeSort }) => {
         <table className='text-sm text-gray-700 bg-white p-2 w-full rounded shadow'>
             <thead className='border-b border-grayborder p-2'>
                 <tr>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>#</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>City</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>Country</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>All Buildings</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>100m+</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>150m+</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>200m+</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>300m+</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>Telecom Towers</th>
-                    <th className='px-2 py-1 text-left' style={{padding:'4px'}}>All Structures</th>
+                    <th className='px-2 py-1 text-left header' >#</th>
+                    <th className='px-2 py-1 text-left header' >City</th>
+                    <th className='px-2 py-1 text-left header' >Country</th>
+                    <th className='px-2 py-1 text-left header' >All Buildings</th>
+                    <th className='px-2 py-1 text-left header' >100m+</th>
+                    <th className='px-2 py-1 text-left header' >150m+</th>
+                    <th className='px-2 py-1 text-left header' >200m+</th>
+                    <th className='px-2 py-1 text-left header' >300m+</th>
+                    <th className='px-2 py-1 text-left header' >Telecom Towers</th>
+                    <th className='px-2 py-1 text-left header' >All Structures</th>
                 </tr>
             </thead>
             <tbody>
                 {sortedData.map(item => (
                     <tr key={item["city"]}>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["#"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["city"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["country"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["AllBuildings"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["100+"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["150+"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["200+"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["300+"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["TelecomTowers"]}</td>
-                        <td className='p-2 border-b border-gray-300' style={{borderBottom:'1px solid grey'}}>{item["AllStructures"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["#"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["city"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["country"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["AllBuildings"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["100+"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["150+"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["200+"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["300+"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["TelecomTowers"]}</td>
+                        <td className='p-2 border-b border-gray-300 cell' >{item["AllStructures"]}</td>
 
                     </tr>
                 ))}
